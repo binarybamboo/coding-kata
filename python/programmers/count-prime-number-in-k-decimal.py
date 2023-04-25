@@ -4,6 +4,7 @@ link: https://school.programmers.co.kr/learn/courses/30/lessons/92335?itm_conten
 """
 import math
 
+
 def convert_k_decimal_point(n, k):
     result = ''
 
@@ -19,7 +20,7 @@ def convert_k_decimal_point(n, k):
 def is_prime(n):
     if n == 1:
         return False
-    for i in range(2, int(math.sqrt(n))+1):
+    for i in range(2, int(math.sqrt(n)) + 1):
         if n % i == 0:
             return False
     return True
@@ -36,8 +37,6 @@ def solution(n, k):
         if is_prime(int(n)):  # n이 소수인 경우 answer+=1
             result += 1
     return result
-
-
 
 
 print(solution(437674, 3))

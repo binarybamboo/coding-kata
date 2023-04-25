@@ -1,6 +1,8 @@
 """
 link: https://school.programmers.co.kr/learn/courses/30/lessons/12930?itm_content=course14743
 """
+
+
 def solution(s):
     res = []
     for x in s.split(' '):
@@ -10,5 +12,6 @@ def solution(s):
             word = word + c
         res.append(word)
     return ' '.join(res)
+
 
 print(solution("try hello world"))

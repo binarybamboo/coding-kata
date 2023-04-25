@@ -13,10 +13,12 @@ def solution(s):
     return False
 """
 
+
 def solution(s):
     if len(s) in [4, 6] and s.isdigit():
         return True
     return False
 
-print(solution("a234")) # False
-print(solution("1234")) # True
+
+print(solution("a234"))  # False
+print(solution("1234"))  # True
