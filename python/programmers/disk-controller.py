@@ -6,8 +6,8 @@ link: https://school.programmers.co.kr/learn/courses/30/lessons/42627?language=p
 Reference solution: https://soohyun6879.tistory.com/136
 """
 
-
 import heapq
+
 
 def solution(jobs):
     answer, now, i = 0, 0, 0
@@ -20,18 +20,16 @@ def solution(jobs):
             if start < j[0] <= now:
                 heapq.heappush(heap, [j[1], j[0]])
 
-        if len(heap) > 0: # 처리할 작업이 있는 경우
+        if len(heap) > 0:  # 처리할 작업이 있는 경우
             cur = heapq.heappop(heap)
             start = now
             now += cur[0]
-            answer += now - cur[1] # 작업 요청시간부터 종료시간까지의 시간 계산
-            i +=1
-        else: # 처리할 작업이 없는 경우 다음 시간을 넘어감
+            answer += now - cur[1]  # 작업 요청시간부터 종료시간까지의 시간 계산
+            i += 1
+        else:  # 처리할 작업이 없는 경우 다음 시간을 넘어감
             now += 1
 
     return answer // len(jobs)
-
-
 
 
 print(solution([[0, 3], [1, 9], [2, 6]]) == 9)
