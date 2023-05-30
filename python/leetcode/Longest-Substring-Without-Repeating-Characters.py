@@ -7,15 +7,12 @@ class Solution:
         longest = 1
         while right < len(s):
             if s[right] in seen:
-                left = max(left,seen[s[right]]+1)
+                left = max(left, seen[s[right]] + 1)
             longest = max(longest, right - left + 1)
             seen[s[right]] = right
             right += 1
         return longest
 
 
-
-solution = new Solution()
+solution = Solution()
 print(solution.lengthOfLongestSubstring("abcabcbb") == 3)
-
-
