@@ -2,6 +2,8 @@
 this solution is not O(log(n+m))
 I have to change this logic as O(log(n+m)).
 """
+from typing import List
+
 
 class Solution:
     def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
