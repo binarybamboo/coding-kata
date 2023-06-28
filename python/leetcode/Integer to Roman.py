@@ -13,7 +13,7 @@ class Solution:
 
         result = ''
 
-        for n in [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]:
+        for  n in [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]:
             while n <= num:
                 result += num_dict[n]
                 num -= n
